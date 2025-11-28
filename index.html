@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HAADI - Health Awareness & Anti-Drugs Initiatives (Recovery is Possible)</title>
+  
+  <link rel="icon" type="image/png" href="HAADILogo.jpg"> 
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --haadi-green: #198754; /* Bootstrap success green */
+      --haadi-dark: #0f4c3a; /* Darker green for text/accents */
+      --haadi-light-green: #d1e7dd; /* Success subtle background */
+    }
+
+    /* 1. Global Typography */
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+    }
+
+    h1, h2, h3, h4, h5, .fw-bolder {
+      font-weight: 700 !important;
+      color: var(--haadi-dark);
+    }
+    
+    .text-success, .navbar-brand {
+      color: var(--haadi-green) !important;
+    }
+    .bg-success {
+      background-color: var(--haadi-dark) !important; /* Making navbar darker for elegance */
+    }
+
+    /* 2. Hero Slider Refinement */
+    .carousel-caption {
+      background: rgba(0, 0, 0, 0.75); /* Slightly darker background for better text contrast */
+      padding: 25px 30px;
+      border-radius: 10px;
+      bottom: 10%; /* Lower position */
+      max-width: 80%;
+      margin: 0 auto;
+    }
+
+    /* 3. Card and Element Enhancement */
+    .program-card img,
+    .gallery-item img {
+      height: 220px; /* Slightly taller images */
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .program-card {
+      border: none;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Soft shadow for lift */
+      transition: all 0.3s;
+    }
+    .program-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Gallery */
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .gallery-item img:hover {
+      transform: scale(1.1); /* More pronounced zoom effect */
+      transition: transform 0.5s ease;
+    }
+    
+    /* 4. Section Separators and Backgrounds */
+    .bg-success-subtle {
+      background-color: var(--haadi-light-green) !important;
+    }
+
+    section {
+        padding-top: 6rem !important;
+        padding-bottom: 6rem !important;
+    }
+
+    /* 5. Button Style */
+    .btn-outline-light:hover {
+        background-color: var(--haadi-green) !important;
+        color: white !important;
+        border-color: white !important;
+    }
+    .btn-outline-light {
+        border-width: 2px;
+    }
+    
+    .footer {
+        background-color: var(--haadi-dark) !important;
+    }
+    
+    /* Icon styling in lists */
+    .fa-home, .fa-phone, .fa-envelope, .fa-globe {
+        color: var(--haadi-dark);
+    }
+    
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bolder fs-3" href="#">
+        <img src="HAADILogo.jpg" alt="HAADI Logo" style="height: 100px; width: 100px; margin-right: 1px; border-radius: 5px;"> HAADI Foundation
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a href="#who-we-are" class="nav-link text-white">About Us</a></li>
+          <li class="nav-item"><a href="#mission" class="nav-link text-white">Mission</a></li>
+          <li class="nav-item"><a href="#programs" class="nav-link text-white">Programs</a></li>
+          <li class="nav-item"><a href="#impact" class="nav-link text-white">Impact</a></li>
+          <li class="nav-item"><a href="#gallery" class="nav-link text-white">Gallery</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link text-white">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2"></button>
+    </div>
+
+    <div class="carousel-inner">
+
+      <div class="carousel-item active" style="height: 80vh;">
+        <img src="header-image-1.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Community sensitization campaign in Nigeria" />
+
+        <div class="carousel-caption d-block">
+          <h1 class="display-4 fw-bolder">Health Awareness & Anti-Drugs Initiatives (HAADI)</h1>
+          <p class="lead">Promoting Public Health and Drug-Free Living Across Nigeria.</p>
+          <a href="#programs" class="btn btn-outline-light btn-lg mt-2 fw-bold">See Our Work <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="carousel-item" style="height: 80vh;">
+        <img src="header-image-2.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Youth engagement in an anti-drug workshop" />
+
+        <div class="carousel-caption d-block">
+          <h2 class="display-5 fw-bold">Empowering the Next Generation</h2>
+          <p class="lead">Targeted prevention programs and mentorship to keep our youth drug-free.</p>
+          <a href="#programs" class="btn btn-outline-light btn-lg mt-2 fw-bold">Youth Programs</a>
+        </div>
+      </div>
+
+      <div class="carousel-item" style="height: 80vh;">
+        <img src="header-image-3.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Counselling session with a recovering addict" />
+
+        <div class="carousel-caption d-block">
+          <h2 class="display-5 fw-bold">Recovery is Possible</h2>
+          <p class="lead">Providing confidential counseling, support, and rehabilitation referral services.</p>
+          <a href="#contact" class="btn btn-outline-light btn-lg mt-2 fw-bold">Get Support</a>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </header>
+
+  <section id="who-we-are" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-success fw-bold mb-5 text-center">
+        <i class="fas fa-hand-holding-heart me-2"></i> Who We Are
+      </h2>
+
+      <div class="row justify-content-center">
+          <div class="col-lg-10">
+              <p class="lead text-center">
+                The **Health Awareness & Anti-Drugs Initiatives Official Group (HAADI)** is a non-governmental, nonprofit organization dedicated to promoting public health, drug-free living, and community resilience across Nigeria.
+              </p>
+
+              <p class="text-center">
+                Formerly known as the Drugs Free Society Initiative (DFSI), HAADI expanded its mission to include broader health awareness, community sensitization, and multi-level collaboration to address drug abuse and related social challenges. Headquartered in Gombe State, HAADI delivers structured interventions focused on prevention, awareness, support, and rehabilitation referrals—designed to fit the cultural contexts of the communities served.
+              </p>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="mission" class="py-5 bg-white">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-6 mb-5">
+          <h3 class="text-success fw-bold mb-3">
+            <i class="fas fa-bullseye me-2"></i> Our Mission
+          </h3>
+          <p class="lead">To promote a healthier and drug-free society through awareness, prevention, counseling, and stakeholder collaboration.</p>
+        </div>
+
+        <div class="col-md-6 mb-5">
+          <h3 class="text-success fw-bold mb-3">
+            <i class="fas fa-eye me-2"></i> Our Vision
+          </h3>
+          <p class="lead">A society empowered with knowledge, support, and opportunities to live free from drug abuse and preventable health challenges.</p>
+        </div>
+      </div>
+      
+      <hr class="my-5 border-success opacity-25">
+
+      <h3 class="text-success fw-bold mt-4 mb-4 text-center">
+        <i class="fas fa-star me-2"></i> Core Values
+      </h3>
+
+      <div class="row text-center justify-content-center">
+        <div class="col-lg-2 col-md-4 col-sm-6 mb-3">
+            <h4 class="text-success"><i class="fas fa-hands-helping"></i></h4>
+            <p><strong>Compassion:</strong> Empathy for all.</p>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 mb-3">
+            <h4 class="text-success"><i class="fas fa-shield-alt"></i></h4>
+            <p><strong>Integrity:</strong> Transparency and accountability.</p>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 mb-3">
+            <h4 class="text-success"><i class="fas fa-rocket"></i></h4>
+            <p><strong>Empowerment:</strong> Enabling informed choices.</p>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 mb-3">
+            <h4 class="text-success"><i class="fas fa-handshake"></i></h4>
+            <p><strong>Collaboration:</strong> Partnerships for scale.</p>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 mb-3">
+            <h4 class="text-success"><i class="fas fa-globe"></i></h4>
+            <p><strong>Cultural Sensitivity:</strong> Respect for local norms.</p>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 mb-3">
+            <h4 class="text-success"><i class="fas fa-users"></i></h4>
+            <p><strong>Community Ownership:</strong> Sustainable change.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="py-5 bg-success-subtle">
+    <div class="container">
+      <h2 class="text-success fw-bold mb-4 text-center">
+        <i class="fas fa-exclamation-triangle me-2"></i> Why Our Work Matters
+      </h2>
+
+      <div class="row justify-content-center">
+          <div class="col-lg-10 text-center">
+              <p class="lead">
+                Nigeria faces one of the highest substance abuse rates in Africa. The Northeast struggles with the combined challenges of insecurity, trauma, unemployment, and limited access to mental health services—making drug abuse even more widespread.
+              </p>
+
+              <p>
+                HAADI bridges this critical gap through our community-centered model, ensuring early intervention, holistic support, and rehabilitation referral systems are accessible to those in need, transforming lives and communities.
+              </p>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="programs" class="py-5 bg-white">
+    <div class="container">
+      <h2 class="text-success fw-bold text-center mb-5">
+        <i class="fas fa-sitemap me-2"></i> Our Core Services & Programs
+      </h2>
+
+      <div class="row g-4">
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card program-card h-100 shadow-sm">
+            <img src="program1.jpg" class="card-img-top" alt="Community Awareness" />
+            <div class="card-body">
+              <h5 class="fw-bold text-success"><i class="fas fa-bullhorn me-2"></i>1. Community Awareness Campaigns</h5>
+              <p>Public sensitization in markets, schools, and religious centers, using local radio and Hausa-language media.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card program-card h-100 shadow-sm">
+            <img src="program2.jpg" class="card-img-top" alt="Youth Prevention" />
+            <div class="card-body">
+              <h5 class="fw-bold text-success"><i class="fas fa-running me-2"></i>2. Youth-Focused Prevention Programs</h5>
+              <p>School outreach, mentorship, sports, and life skills training to offer constructive alternatives.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card program-card h-100 shadow-sm">
+            <img src="program3.jpg" class="card-img-top" alt="Counselling and Support" />
+            <div class="card-body">
+              <h5 class="fw-bold text-success"><i class="fas fa-comments me-2"></i>3. Support, Counseling & Reintegration</h5>
+              <p>Initial counselling, support groups, and reintegration programs promoting community acceptance.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card program-card h-100 shadow-sm">
+            <img src="program4.jpg" class="card-img-top" alt="Rehabilitation Referral" />
+            <div class="card-body">
+              <h5 class="fw-bold text-success"><i class="fas fa-clinic-medical me-2"></i>4. Rehabilitation Referral & Follow-up</h5>
+              <p>Linkages with specialized rehabilitation centers and follow-up support.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card program-card h-100 shadow-sm">
+            <img src="program5.jpg" class="card-img-top" alt="Advocacy and Policy" />
+            <div class="card-body">
+              <h5 class="fw-bold text-success"><i class="fas fa-balance-scale me-2"></i>5. Advocacy & Policy Engagement</h5>
+              <p>Advocating for better public health and anti-drug policies at state and local levels.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card program-card h-100 shadow-sm">
+            <img src="program6.jpg" class="card-img-top" alt="Collaboration and Partnership" />
+            <div class="card-body">
+              <h5 class="fw-bold text-success"><i class="fas fa-hands-helping me-2"></i>6. Partnerships & Collaboration</h5>
+              <p>Collaboration with NGOs, health facilities, and traditional institutions for sustainable development.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="impact" class="py-5 bg-success-subtle">
+    <div class="container">
+      <h2 class="text-success fw-bold mb-5 text-center">
+        <i class="fas fa-chart-line me-2"></i> Our Impact & Goals
+      </h2>
+
+      <div class="row">
+
+        <div class="col-md-6">
+          <h4 class="fw-bold text-success mb-3"><i class="fas fa-check-circle me-2"></i> Impact So Far</h4>
+          <ul>
+            <li>**50,000+ individuals** sensitized across schools, markets, and rural communities.</li>
+            <li>**120+ radio programs** aired on drug abuse prevention.</li>
+            <li>**500+ initial counseling sessions** conducted.</li>
+            <li>Strong partnerships with NDLEA, Ministries, and NGOs.</li>
+          </ul>
+        </div>
+
+        <div class="col-md-6">
+          <h4 class="fw-bold text-success mb-3"><i class="fas fa-compass me-2"></i> Community Impact Goals</h4>
+          <ul>
+            <li>Reduce drug abuse prevalence among youth nationwide.</li>
+            <li>Improve access to health literacy & preventive education.</li>
+            <li>Promote community involvement in drug-free initiatives.</li>
+            <li>Build healthier, more informed communities.</li>
+            
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="partners" class="py-5 bg-white">
+    <div class="container text-center">
+      <h2 class="text-success fw-bold mb-5">
+        <i class="fas fa-users-cog me-2"></i> Our Partners & Stakeholders
+      </h2>
+
+      <p class="lead mb-5">We achieve scale and sustainable results through collaboration with key stakeholders:</p>
+
+      <div class="row">
+
+        <div class="col-md-4 mb-4">
+          <div class="p-3 border rounded h-100 shadow-sm">
+              <h5 class="fw-bold text-success"><i class="fas fa-gavel fa-2x mb-2"></i></h5>
+              <h5 class="fw-bold text-success">Government & Security</h5>
+              <p>NDLEA, Ministry of Health, Security Agencies</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="p-3 border rounded h-100 shadow-sm">
+              <h5 class="fw-bold text-success"><i class="fas fa-school fa-2x mb-2"></i></h5>
+              <h5 class="fw-bold text-success">Community & Institutions</h5>
+              <p>Schools, traditional rulers, religious bodies, health institutions</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="p-3 border rounded h-100 shadow-sm">
+              <h5 class="fw-bold text-success"><i class="fas fa-handshake-alt fa-2x mb-2"></i></h5>
+              <h5 class="fw-bold text-success">Development Partners</h5>
+              <p>Local & international NGOs, media organizations, philanthropists</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-success fw-bold text-center mb-5">
+        <i class="fas fa-camera-retro me-2"></i> Activity Gallery
+      </h2>
+
+      <p class="text-center lead mb-5">A snapshot of our community engagements and sensitization events.</p>
+
+      <div class="row g-4" id="gallery-container">
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <a href="gallery-1.jpg" data-bs-toggle="modal" data-bs-target="#imageModal"><div class="gallery-item shadow-sm"><img src="gallery-1.jpg" class="img-fluid w-100" alt="HAADI event photo 1"></div></a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <a href="gallery-2.jpg" data-bs-toggle="modal" data-bs-target="#imageModal"><div class="gallery-item shadow-sm"><img src="gallery-2.jpg" class="img-fluid w-100" alt="HAADI event photo 2"></div></a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <a href="gallery-3.jpg" data-bs-toggle="modal" data-bs-target="#imageModal"><div class="gallery-item shadow-sm"><img src="gallery-3.jpg" class="img-fluid w-100" alt="HAADI event photo 3"></div></a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <a href="gallery-4.jpg" data-bs-toggle="modal" data-bs-target="#imageModal"><div class="gallery-item shadow-sm"><img src="gallery-4.jpg" class="img-fluid w-100" alt="HAADI event photo 4"></div></a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <a href="gallery-5.jpg" data-bs-toggle="modal" data-bs-target="#imageModal"><div class="gallery-item shadow-sm"><img src="gallery-5.jpg" class="img-fluid w-100" alt="HAADI event photo 5"></div></a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <a href="gallery-6.jpg" data-bs-toggle="modal" data-bs-target="#imageModal"><div class="gallery-item shadow-sm"><img src="gallery-6.jpg" class="img-fluid w-100" alt="HAADI event photo 6"></div></a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <a href="gallery-7.jpg" data-bs-toggle="modal" data-bs-target="#imageModal"><div class="gallery-item shadow-sm"><img src="gallery-7.jpg" class="img-fluid w-100" alt="HAADI event photo 7"></div></a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <a href="gallery-8.jpg" data-bs-toggle="modal" data-bs-target="#imageModal"><div class="gallery-item shadow-sm"><img src="gallery-8.jpg" class="img-fluid w-100" alt="HAADI event photo 8"></div></a>
+        </div>
+
+      </div>
+      
+      <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+          <div class="modal-content bg-transparent border-0">
+            <div class="modal-body p-0 text-center">
+              <img id="modalImage" src="" class="img-fluid rounded shadow-lg" alt="HAADI Gallery Image">
+              <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact" class="py-5 bg-white">
+    <div class="container">
+      <h2 class="text-success fw-bold mb-5 text-center">
+        <i class="fas fa-map-marker-alt me-2"></i> Contact Us
+      </h2>
+
+      <div class="row">
+
+        <div class="col-md-6 mb-4">
+          <h4 class="fw-bold mb-4">Get In Touch</h4>
+
+          <p class="lead">We welcome partnerships, donations, and inquiries. Contact us for collaborations.</p>
+
+          <p><i class="fas fa-home fa-lg me-3"></i> <strong>Address:</strong> LA Madugu Plaza, State Lowcost, Gombe, Nigeria</p>
+          <p><i class="fas fa-phone fa-lg me-3"></i> <strong>Phone:</strong> +234 706 186 5850, 0808 427 7233, 0810 539 2025</p>
+          <p><i class="fas fa-envelope fa-lg me-3"></i> <strong>Email:</strong>
+            <a href="mailto:info@haadifoundation.com">info@haadifoundation.com</a>,
+            <a href="mailto:dfsinigeria@gmail.com">dfsinigeria@gmail.com</a>
+          </p>
+          <p><i class="fas fa-globe fa-lg me-3"></i> <strong>Website:</strong> 
+            <a href="http://www.haadifoundation.com">www.haadifoundation.com</a>
+          </p>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <h4 class="fw-bold mb-4">Our Location</h4>
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15654.856947683935!2d11.16851215!3d10.2796191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x105553b5167f3c31%3A0xc6c738e4a87612f0!2sGombe%2C%20Gombe%20State%2C%20Nigeria!5e0!3m2!1sen!2sus!4v1677840000000"
+            width="100%" 
+            height="350" 
+            style="border:0; border-radius: 8px;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer text-white text-center py-4">
+    <div class="container">
+        <p class="mb-0">© 2025 HAADI Foundation. All Rights Reserved. | <i class="fas fa-heartbeat"></i> Recovery is Possible</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Auto-start carousel
+    var myCarousel = document.querySelector('#hero-carousel');
+    var carousel = new bootstrap.Carousel(myCarousel, {
+      interval: 5000,
+      wrap: true
+    });
+    
+    // Lightbox Functionality for Gallery
+    document.getElementById('gallery-container').addEventListener('click', function(e) {
+        if (e.target.closest('.gallery-item')) {
+            e.preventDefault();
+            const imageSrc = e.target.closest('a').getAttribute('href');
+            document.getElementById('modalImage').setAttribute('src', imageSrc);
+            const modal = new bootstrap.Modal(document.getElementById('imageModal'));
+            modal.show();
+        }
+    });
+  </script>
+
+</body>
+</html>
